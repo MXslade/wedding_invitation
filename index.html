@@ -99,7 +99,7 @@
     .scroll-cue { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-dark); }
 
     /* Intro and date */
-    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch; }
+    .intro-grid { display: grid; grid-template-columns: calc(50% - 14px) calc(50% - 14px); gap: 28px; align-items: stretch; }
     .soft-card { padding: clamp(28px, 5vw, 52px); border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255,253,249,.62); }
     .couple-card { text-align: center; display: flex; flex-direction: column; justify-content: center; min-height: 300px; }
     .couple-card h2 { font-size: clamp(2.8rem, 6vw, 4.2rem); margin: 12px 0; }
@@ -178,6 +178,9 @@
       .reveal { opacity: 1; transform: none; }
     }
     @media (min-width: 760px) { .slide { --slide-ratio: .58; } }
+    @media (max-width: 1140px) {
+        .intro-grid, .location-layout { grid-template-columns: 100%; }
+    }
     @media (max-width: 720px) {
       .wrap { width: min(100% - 28px, 600px); }
       .nav-inner { min-height: 60px; }
@@ -186,7 +189,6 @@
       .nav-links a:nth-child(2) { display: none; }
       .hero { min-height: 690px; min-height: min(760px, calc(100svh - 60px)); padding: 66px 0 80px; background-position: 55% center; }
       .hero::before { inset: 10px; }
-      .intro-grid, .location-layout { grid-template-columns: 100%; }
       .couple-card, .date-card { min-height: 270px; }
       .details-grid { grid-template-columns: 1fr; gap: 12px; }
       .detail { padding: 24px; }
@@ -195,6 +197,10 @@
       .slides { gap: 12px; }
       .slide { --slide-ratio: .84; }
       .section { padding: 68px 0; }
+
+      #zheltoksan {
+          font-size: 3em;
+      }
     }
     @media (max-width: 390px) {
       .brand { font-size: 1.2rem; }
@@ -264,7 +270,7 @@
           </article>
           <article class="soft-card date-card reveal delay-1">
             <div class="eyebrow proper-heading"><div class="ornament-left"></div>Күнін белгілеп қойыңыз<div class="ornament-right"></div></div>
-            <h2 style="margin: 20px 0; font-size: 3em;"><span style="white-space: nowrap;"><span style="color: var(--accent-dark)">19</span> Желтоқсан</span><br/><span style="white-space: nowrap;">Сенбі • <span style="color: var(--accent-dark);">2026</span></span></h2>
+            <h2 id="zheltoksan" style="margin: 20px 0;"><span style="white-space: nowrap;"><span style="color: var(--accent-dark)">19</span> Желтоқсан</span><br/><span style="white-space: nowrap;">Сенбі • <span style="color: var(--accent-dark);">2026</span></span></h2>
             <div class="weekday"></div>
             <div class="time">Салтанатты рәсім сағат 18:00-де басталады</div>
           </article>
