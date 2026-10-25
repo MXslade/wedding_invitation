@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f8f5ef">
-  <title>Еңлiк & Тұрар — Үйлену тойына шақыру</title>
-  <meta name="description" content="Еңлiк мен Тұрар-тің үйлену тойына шын жүректен шақырамыз.">
+  <title>Тұрар & Еңлiк — Үйлену тойына шақыру</title>
+  <meta name="description" content="Тұрар мен Еңлiк-тің үйлену тойына шын жүректен шақырамыз.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -240,7 +240,6 @@
         <a href="#our-day">Біздің күніміз</a>
         <a href="#location">Өтетін орны</a>
         <a href="#gallery">Фотосуреттер</a>
-        <a href="#rsvp">Жауап беру</a>
       </div>
     </div>
   </nav>
@@ -251,9 +250,7 @@
       <h1>Тұрар <span>&</span> Еңлiк</h1>
       <div class="hero-date">2026 жылғы <br>19 желтоқсан · сенбі</div>
       <p class="intro">Өміріміздің жаңа кезеңін бірге бастаған сәтімізді қуанышымызға ортақтасып, бізбен бірге атап өтуге шақырамыз.</p>
-      <a class="btn" href="#rsvp">Қатысатыныңызды хабарлаңыз <span aria-hidden="true">↗</span></a>
     </div>
-    <a class="scroll-cue" href="#our-day">Төмен қарай өтіңіз ↓</a>
   </header>
 
   <main>
@@ -325,7 +322,7 @@
         <div class="section-heading reveal" style="margin-bottom: 24px;">
           <div class="eyebrow proper-heading"><div class="ornament-left"></div>Естен кетпес сәттер<div class="ornament-right"></div></div>
           <h2 style="margin: 20px 0;">Оқиғамыз — фотосуреттерде</h2>
-          <p>Жүрекке жақын естеліктер. Бұл үлгі фотосуреттерді өз суреттеріңізбен ауыстырыңыз.</p>
+          <p>Жүрекке жақын естеліктер.</p>
         </div>
         <div class="carousel reveal" aria-label="Фотосуреттер каруселі">
           <div class="slides" id="slides">
@@ -415,16 +412,6 @@
     } else {
       revealItems.forEach(item => item.classList.add("is-visible"));
     }
-
-    // Expand/collapse embedded map.
-    const mapToggle = document.getElementById("mapToggle");
-    const mapPanel = document.getElementById("mapPanel");
-    mapToggle.addEventListener("click", () => {
-      const isOpen = mapToggle.getAttribute("aria-expanded") === "true";
-      mapToggle.setAttribute("aria-expanded", String(!isOpen));
-      mapPanel.hidden = isOpen;
-      mapToggle.textContent = isOpen ? "Картаны көрсету +" : "Картаны жасыру −";
-    });
 
     // Centered, looping photo carousel with one dot per image.
     const slides = document.getElementById("slides");
